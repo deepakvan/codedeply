@@ -9,6 +9,15 @@ import threading
 import random
 import os
 
+# Replace 'vpn_address' with the address of your free VPN server
+proxy_address = "us-mia.jumptoserver.com"
+import requests
+
+# Set up proxy settings using environment variables
+os.environ['HTTP_PROXY'] = proxy_address
+os.environ['HTTPS_PROXY'] = proxy_address
+
+
 """ kuber """
 API_KEY = os.environ.get("API_KEY")
 API_SECRET = os.environ.get("API_SECRET")
