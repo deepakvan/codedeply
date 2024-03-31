@@ -7,6 +7,7 @@ from binance.error import ClientError
 import pandas as pd
 import threading
 import random
+import os
 
 """ kuber """
 API_KEY = os.environ.get("API_KEY")
