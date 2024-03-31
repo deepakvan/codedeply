@@ -10,7 +10,7 @@ import random
 import os
 
 # Replace 'vpn_address' with the address of your free VPN server
-proxy_address = "us-mia.jumptoserver.com"
+proxy_address = "103.38.205.69:5678"
 import requests
 
 # Set up proxy settings using environment variables
