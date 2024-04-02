@@ -43,6 +43,7 @@ def bot():
                     print('Cant connect to API. Check IP, restrictions or wait some time')
                 if balance != None:
                     print("My balance is: ", balance, " USDT")
+                    raise Exception("My balance is: ", balance, " USDT") 
                     # getting position list:
                     pos = hf.get_pos(client)
                     print(f'You have {len(pos)} opened positions:\n{pos}')
@@ -78,6 +79,6 @@ def bot():
                     time.sleep((13 - (minutes % 15)) * 60)
                     print("awaked at ",datetime.datetime.now())
             time.sleep(5)
-        except:
+        except :
             print("Error in code Main Code")
             pass
