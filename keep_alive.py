@@ -12,11 +12,11 @@ def index():
 @app.route('/bot')
 def run_bot():
   #if not is_bot_running:
-  #t = Thread(target=main.bot)
-  #t.start()
+  t = Thread(target=main.bot)
+  t.start()
   #is_bot_running=True
   #return "Bot Started"
-  main.bot()
+  #main.bot()
   return "Bot Alive"
 
 def run():
