@@ -10,6 +10,7 @@ def index():
   if not is_bot_running:
     t = Thread(target=main.bot)
     t.start()
+    is_bot_running=True
     return "Bot Started"
   return "Bot Alive"
 
