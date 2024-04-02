@@ -8,8 +8,9 @@ app.debug = True
 @app.route('/')
 def index():
   #if not is_bot_running:
-  t = Thread(target=main.bot)
-  t.start()
+  #t = Thread(target=main.bot)
+  #t.start()
+  main.bot()
   #is_bot_running=True
   #return "Bot Started"
   return "Bot Alive"
