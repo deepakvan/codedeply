@@ -35,7 +35,7 @@ def bot():
         try:
             minutes = datetime.datetime.now().minute
             seconds = datetime.datetime.now().second
-            if minutes % 15 <= 5 and seconds>=5: #minutes%15<=1
+            if minutes % 15 <= 10 and seconds>=5: #minutes%15<=1
                 # we need to get balance to check if the connection is good, or you have all the needed permissions
                 balance = hf.get_balance_usdt(client)
                 sleep(1)
@@ -80,11 +80,11 @@ def bot():
                     print("awaked at ",datetime.datetime.now())
             time.sleep(5)
         except ClientError as error:
-        print(
-            "----main code Found error. status: {}, error code: {}, error message: {}".format(
-                error.status_code, error.error_code, error.error_message
+            print(
+                "----main code Found error. status: {}, error code: {}, error message: {}".format(
+                    error.status_code, error.error_code, error.error_message
+                )
             )
-        )
         #except :
         #print("Error in code Main Code")
         #pass
