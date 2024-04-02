@@ -141,11 +141,12 @@ def get_qty_precision(client, symbol):
 
 def remove_pending_orders(client):
     print("----Removing Pending Orders ")
-    raise Exception("Sorry, no numbers below zero") 
+    #raise Exception("Sorry, no numbers below zero") 
     while True:
         try:
             pos = get_pos(client)
             print(f'You have {len(pos)} opened positions:\n{pos}')
+            raise Exception(f'You have {len(pos)} opened positions:\n{pos}') 
             if len(pos) == 0:
                 ord = check_orders(client)
                 # print(ord)
@@ -161,9 +162,9 @@ def remove_pending_orders(client):
                     error.status_code, error.error_code, error.error_message
                 )
             )
-        except:
-            sleep(10)
-            continue
+        #except:
+        #sleep(10)
+        #continue
 
 
 def modify_sl_from_previous_candle(client, order_details, qty):
