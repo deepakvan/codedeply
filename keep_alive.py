@@ -6,6 +6,7 @@ app.debug = True
 
 @app.route('/')
 def index():
+  import main
   return "Alive"
 
 
@@ -17,3 +18,4 @@ def keep_alive():
   #t = Thread(target=run)
   #t.start()
   run()
+keep_alive()
