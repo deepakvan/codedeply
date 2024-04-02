@@ -1,13 +1,16 @@
 from flask import Flask, render_template
 from threading import Thread
-
+import main
+is_bot_running=False
 app = Flask(__name__)
 app.debug = True
 
 @app.route('/')
 def index():
-  import main
-  return "Alive"
+  if not is_bot_running:
+    t = Thread(target=main.bot)
+    t.start()
+  return "Bot Alive"
 
 
 def run():
