@@ -9,6 +9,9 @@ import threading
 import random
 import os
 
+from keep_alive import keep_alive
+
+keep_alive()
 # Replace 'vpn_address' with the address of your free VPN server
 #proxy_address = "103.38.205.69:5678"
 #import requests
