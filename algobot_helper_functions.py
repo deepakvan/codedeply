@@ -141,6 +141,7 @@ def get_qty_precision(client, symbol):
 
 def remove_pending_orders(client):
     print("----Removing Pending Orders ")
+    raise Exception("Sorry, no numbers below zero") 
     while True:
         try:
             pos = get_pos(client)
