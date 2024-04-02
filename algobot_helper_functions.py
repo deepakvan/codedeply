@@ -144,7 +144,7 @@ def remove_pending_orders(client):
     while True:
         try:
             pos = get_pos(client)
-            #print(f'You have {len(pos)} opened positions:\n{pos}')
+            print(f'You have {len(pos)} opened positions:\n{pos}')
             if len(pos) == 0:
                 ord = check_orders(client)
                 # print(ord)
